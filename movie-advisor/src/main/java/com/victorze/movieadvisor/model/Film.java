@@ -12,7 +12,7 @@ public class Film {
 	
 	public Film() { }
 	
-	public Film(long id, String title, List<String> genres, String year) {
+	public Film(long id, String title, String year, List<String> genres) {
 		this.id = id;
 		this.title = title;
 		this.genres = genres;
