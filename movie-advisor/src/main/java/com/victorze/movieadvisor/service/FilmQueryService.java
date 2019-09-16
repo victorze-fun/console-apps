@@ -3,7 +3,6 @@ package com.victorze.movieadvisor.service;
 import java.util.Collection;
 
 import com.victorze.movieadvisor.model.Film;
-import com.victorze.movieadvisor.service.FilmQueryService;
 
 public interface FilmQueryService {
 	

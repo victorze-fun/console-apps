@@ -10,7 +10,6 @@ import javax.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.victorze.movieadvisor.dao.UtilFilmFileReader;
 import com.victorze.movieadvisor.config.AppConfig;
 import com.victorze.movieadvisor.model.Film;
 
