@@ -1,4 +1,4 @@
-package victorze.com.movieadvisor;
+package com.victorze.movieadvisor;
 
 public class App 
 {
