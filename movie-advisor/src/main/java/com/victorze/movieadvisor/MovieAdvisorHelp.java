@@ -18,11 +18,9 @@ public class MovieAdvisorHelp {
 	@PostConstruct
 	public void init() {
 		try {
-			// @formatter:off
 			help = Files
 					.lines(Paths.get(ResourceUtils.getFile("classpath:ayuda.txt").toURI()))
 					.collect(Collectors.joining("\n")); 
-			// @formatter:on
 
 		} catch (IOException e) {
 			System.err.println("Error cargando el texto de ayuda");

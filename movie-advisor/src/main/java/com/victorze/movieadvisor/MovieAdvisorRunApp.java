@@ -51,7 +51,7 @@ public class MovieAdvisorRunApp {
 		} else {
 
 			// De esta forma hemos asegurado que el número de argumentos
-			// es par (opción valoropción) y que no hay más de cuatro
+			// es par (opción valor opción) y que no hay más de cuatro
 			// parejas (ver fichero de ayuda).
 			List<String[]> argumentos = new ArrayList<>();
 
