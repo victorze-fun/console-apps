@@ -15,7 +15,7 @@ public class ATMScreen {
 		System.out.println("|2. Salir                |");
 		System.out.println(" ------------------------ ");
 	}
-	
+
 	public void showMainMenu() {
 		System.out.println(" ------------------------ ");
 		System.out.println("|     Banco Nacional     |");
@@ -30,11 +30,11 @@ public class ATMScreen {
 	public int readOption() {
 		System.out.print("Ingrese una opción: ");
 		while (!sc.hasNextInt()) {
-	        System.out.println("La opción ingresada no es válida.");
-	        System.out.print("Ingrese una opción: ");
-	        sc.next();
-	    }
-	    return sc.nextInt();
+			System.out.println("La opción ingresada no es válida.");
+			System.out.print("Ingrese una opción: ");
+			sc.next();
+		}
+		return sc.nextInt();
 	}
 
 	public String readCardNumber() {
@@ -50,63 +50,63 @@ public class ATMScreen {
 	public double readAmountDeposit() {
 		System.out.print("Ingrese el monto a depositar: ");
 		while (!sc.hasNextDouble()) {
-	        System.out.println("La opción ingresada no es válida.");
-	        System.out.print("Ingrese el monto a depositar: ");
-	        sc.next();
-	    }
+			System.out.println("La opción ingresada no es válida.");
+			System.out.print("Ingrese el monto a depositar: ");
+			sc.next();
+		}
 		double amount = sc.nextDouble();
 		if (amount <= 0) {
 			System.out.println("El monto debe ser mayor que cero.");
 			amount = readAmountDeposit();
 		}
-	    return amount;
+		return amount;
 	}
-	
+
 	public double readAmountWithdrawal() {
 		System.out.print("Ingrese el monto a retirar: ");
 		while (!sc.hasNextDouble()) {
-	        System.out.println("La opción ingresada no es válida.");
-	        System.out.print("Ingrese el monto a retirar: ");
-	        sc.next();
-	    }
+			System.out.println("La opción ingresada no es válida.");
+			System.out.print("Ingrese el monto a retirar: ");
+			sc.next();
+		}
 		double amount = sc.nextDouble();
 		if (amount <= 0) {
 			System.out.println("El monto debe ser mayor que cero.");
 			amount = readAmountWithdrawal();
 		}
-	    return amount;
+		return amount;
 	}
-	
+
 	public void seeBalance(double balance) {
 		System.out.printf("Saldo: %.2f soles.%n", balance);
 	}
-	
+
 	public void msgSuccessfullyAmount(double amount) {
 		System.out.printf("Se depositó %.2f soles con éxito.%n", amount);
 	}
-	
+
 	public void msgSuccessfullyWithdrawal(double amount) {
 		System.out.printf("Ha retirado %.2f soles con éxito.%n", amount);
 	}
-	
+
 	public void msgInsufficientFunds() {
 		System.out.println("No tiene fondos suficientes.");
 	}
-	
+
 	public void msgExitApp() {
 		System.out.println("Programa finalizado.");
 	}
-	
+
 	public void msgInvalidCard() {
 		System.out.println("Número de tarjeta o clave inválido.");
 	}
-	
+
 	public void pressEnterContinue() {
 		sc = new Scanner(System.in);
 		System.out.println("Presione enter para continuar...");
 		sc.nextLine();
 	}
-	
+
 	public void msgInvalidCode() {
 		System.out.println("El código ingresado no es válido.");
 	}
